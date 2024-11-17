@@ -1,0 +1,79 @@
+:root {
+  --gradient: linear-gradient(to right, #23074d, #cc5333);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #273c75;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-wood.png");
+}
+
+.meme-generator {
+  width: 100%;
+  max-width: 500px;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.file-input {
+  margin-bottom: 20px;
+}
+
+.file-input label {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: var(--gradient);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.file-input input {
+  display: none;
+}
+
+.meme-generator input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+#topTextInput,
+#bottomTextInput {
+  margin-bottom: 20px;
+}
+
+canvas {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  border: 1px solid #ddd;
+}
+
+.btn-download {
+  padding: 10px 20px;
+  background: var(--gradient);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
