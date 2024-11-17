@@ -1,5 +1,6 @@
 :root {
   --gradient: linear-gradient(to right, #23074d, #cc5333);
+  --hover-gradient: linear-gradient(to right, #cc5333, #23074d); /* Reversed gradient for hover */
 }
 
 * {
@@ -26,6 +27,12 @@ body {
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.meme-generator:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
 }
 
 .file-input {
@@ -40,6 +47,12 @@ body {
   color: white;
   font-weight: bold;
   cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.file-input label:hover {
+  background: var(--hover-gradient);
+  transform: scale(1.05); /* Slight scaling effect */
 }
 
 .file-input input {
@@ -53,18 +66,32 @@ body {
   border: 1px solid #ddd;
   border-radius: 5px;
   margin-bottom: 15px;
+  background: #f9f9f9;
+  transition: all 0.3s ease;
 }
 
-#topTextInput,
-#bottomTextInput {
-  margin-bottom: 20px;
+.meme-generator input:focus {
+  outline: none;
+  border-color: #cc5333;
+  box-shadow: 0 0 8px rgba(204, 83, 51, 0.5); /* Highlight border */
+}
+
+.meme-generator input:hover {
+  background: #f1f1f1;
 }
 
 canvas {
   display: block;
   margin: 20px auto;
   max-width: 100%;
+  border-radius: 10px;
   border: 1px solid #ddd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+canvas:hover {
+  transform: scale(1.02); /* Slight enlargement */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add shadow */
 }
 
 .btn-download {
@@ -76,4 +103,10 @@ canvas {
   border: none;
   border-radius: 20px;
   cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-download:hover {
+  background: var(--hover-gradient);
+  transform: translateY(-3px); /* Slight lift */
 }
